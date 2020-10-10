@@ -1,16 +1,17 @@
-# !!!Replace with your unique project name!!!
+Black and White
 
 ## Description
 
-!!!Replace with a description of what your program does!!!
+Takes any image and changes it to Black and White 
 
 ## Developer
 
-!!!Replace with your name!!!
+Elliott Meeks
 
 ## Example
 
-To run the program, give the following commands:
+1. Upload a bmp image
+2. change image.open("test4.bmp") to your file name.
 
 ```
 g++ --std=c++11 main.cpp -o cvp
@@ -27,20 +28,20 @@ Here is an example of the program running:
 
 ### Variables and Data Types
 
-!!!Replace with a summary and examples of how multiple variables have been used with a variety of data types and why they have been used effectively and appropriately!!!
+Width of image and height of image are used in the for loops
 
 ### Input and Output
 
-!!!Replace with a summary and examples of how input and output have been used effectively and appropriately!!!
+inputs a pixles rgb values and outputs their average for a greyscale efect
 
 ### Decisions
 
-!!!Replace with a summary and examples of how multiple decision constructs have been used effectively and appropriately!!!
+in your library I made it if the r,g,b values exceded 255 or was less than 0 than it would set the value to 255 and 0 respectively.
 
 ### Iteration
 
-!!!Replace with a summary and examples of how iteration has been used effectively and appropriately!!!
+for loops going through each pixle
 
 ### File Input and Output
 
-!!!Replace with a summary and examples of how input and/or output of files have been used effectively and appropriately!!!
+input an image file, outputs its greyscale

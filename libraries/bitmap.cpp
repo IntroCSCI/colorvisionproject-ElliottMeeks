@@ -251,10 +251,17 @@ bool Bitmap::isImage()
 		for(int column=0; column < width; column++)
 		{
 			Pixel current = pixels[row][column];
-			if( current.red > MAX_RGB || current.red < MIN_RGB ||
-				  current.green > MAX_RGB || current.green < MIN_RGB ||
-				  current.blue > MAX_RGB || current.blue < MIN_RGB )
-				return false;
+			if( current.red > MAX_RGB || current.red < MIN_RGB ){
+        current.red = (current.red>MAX_RGB)*255;
+      }
+			if (current.green > MAX_RGB || current.green < MIN_RGB){
+        current.green = (current.green>MAX_RGB)*255;
+      } 
+			if (current.blue > MAX_RGB || current.blue < MIN_RGB ){
+        current.blue = (current.blue>MAX_RGB)*255;
+      }
+
+      pixels[row][column] = current;
 		}
 	}
 	return true;
@@ -289,4 +296,14 @@ PixelMatrix Bitmap::toPixelMatrix()
 void Bitmap::fromPixelMatrix(const PixelMatrix & values)
 {
 	pixels = values;
+}
+
+int Bitmap::height(){
+  int height = pixels.size();
+  return height;
+}
+
+int Bitmap::width(){
+  int width = pixels[0].size();
+  return width;
 }

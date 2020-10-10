@@ -39,6 +39,8 @@ class Bitmap
     PixelMatrix pixels;
 
   public:
+    int width();
+    int height();
     /**
      * Opens a file as its name is provided and reads pixel-by-pixel the colors
      * into a matrix of RGB pixels. Any errors will cout but will result in an
