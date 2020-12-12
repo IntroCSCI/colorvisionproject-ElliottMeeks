@@ -1,4 +1,4 @@
-# v0.2 Updates
+# v1.0 Updates
 IMAGE CHANGER
 
 ## Description
@@ -69,3 +69,9 @@ maximises the ration of red green and blue. SEE Algerithem Explination.
 
 string menue()
 generates the starting image and gets the user input to choose an image to change
+
+### Classes
+
+Class Color
+this allowes you to creat an image data type that can be used to take a normal bmp picture and change it to a color blind friendy picture useing .change() and it also saves the original picture with 
+.seeOriginal()
